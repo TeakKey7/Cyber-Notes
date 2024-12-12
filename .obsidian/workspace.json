@@ -1,0 +1,188 @@
+{
+  "main": {
+    "id": "3a0c77d78cc7b871",
+    "type": "split",
+    "children": [
+      {
+        "id": "b7537df270045cb8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8d58490a5ec4cb9f",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": "Cyber/System Admin/Windows CLI.md",
+                "staged": true
+              },
+              "icon": "git-pull-request",
+              "title": "Diff View (Windows CLI)"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c156b8de5da17f97",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b723e046a230ea7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8043f7e0716a80f6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c9054a0720074f36",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a39a8b871dede640",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0e3b615965ed1409",
+    "type": "split",
+    "children": [
+      {
+        "id": "56d17840c5fb1c98",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5bad74a9a5c86948",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Untitled.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Untitled"
+            }
+          },
+          {
+            "id": "9d1d26ed0f9b0da7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "db8c168f88b5e435",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1e07b80003954b8f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "a13e7175b38eba25",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "a13e7175b38eba25",
+  "lastOpenFiles": [
+    "Cyber/System Admin/Windows CLI.md",
+    "Cyber/System Admin",
+    "Cyber",
+    "Untitled.md",
+    "bobsidian",
+    "~/obsidian/bobsidian_git",
+    "~/obsidian",
+    "~",
+    "Untitled 2",
+    "Untitled 1",
+    "Untitled.canvas",
+    "Welcome.md",
+    "create a link.md"
+  ]
+}
