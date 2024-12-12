@@ -20,22 +20,8 @@
               "icon": "lucide-file",
               "title": "Windows CLI"
             }
-          },
-          {
-            "id": "53548da891de7557",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": "Cyber/System Admin/Windows GUI.md",
-                "staged": false
-              },
-              "icon": "git-pull-request",
-              "title": "Diff View (Windows GUI)"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,7 +170,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "53548da891de7557",
+  "active": "a13e7175b38eba25",
   "lastOpenFiles": [
     "Cyber/System Admin/Windows GUI.md",
     "Cyber/System Admin/Windows CLI.md",
