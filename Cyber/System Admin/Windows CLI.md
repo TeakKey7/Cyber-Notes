@@ -13,7 +13,7 @@ Powershell is an object-oriented language. Powershell returns an object for each
 	- `Get-Help Get-Date`
 	- Adding `-examples` shows common uses
 - `Get-FileHash`
-	- Deafults to SHA256. Use `-Algorithm`.
+	- Defaults to SHA256. Use `-Algorithm`.
 ### Windows commands
 - `Get-ComputerInfo`
 - `Get-LocalUser`
