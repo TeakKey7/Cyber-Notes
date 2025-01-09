@@ -13,10 +13,9 @@
 ## Good files to check
 - `~/.bash_history`
 - `cat /var/log/auth.log | grep useradd`
-- `/var/spool/cron/crontabs/[username]`
-	- `crontab -e`
 - `/etc/systemd/system`
 - `/var/log/syslog`
+
 # User config
 ---
 ## Config files
@@ -34,6 +33,7 @@
 	- `-i` Network connections
 	- `-P` display port numbers
 	- `-n` show ips instead of resolving hostnames
+	- `-p` PID
 ## Network
 - `osqueryi`
 	- `SELECT pid, fd, socket, local_address, remote_address FROM process_open_sockets WHERE pid = 267490;`
@@ -43,9 +43,19 @@
 	- `a` all users
 	- `u` user oriented (user and start time)
 	- `x` Include processes not attached to a terminal
+- `ps -eFH`
+	- `-e` select all processes
+	- `-F` extra full mode
+	- `-H` process hierarchy (forest)
+- `pstree [PID]`
+	- `-p` list PID
+	- `-s` list child processes parents
+- `top`
+	- `-d [seconds]` refresh rate
+	- `-c` display full command paths
+	- `-u [user]` only show a specific user's processes
 # Log Analysis
 ---
-
 ### `grep`
 - `grep [SEARCH TERM] file.txt`
 ### `wc`
@@ -59,3 +69,13 @@
 - `cat /etc/shells`
 - `chsh -s /usr/bin/zsh`
 - `history`
+# System stuff
+---
+## Systemd
+- `/etc/systemd/system`
+## Cron
+ - `/var/spool/cron/crontabs/[username]`
+- `/etc/crontab` main cron file
+	- `/etc/cron*/`  Contains system cron jobs
+## Other persistance
+- `~/.config/autostart/`
