@@ -12,6 +12,7 @@
 - `find / -type f -executable 2> /dev/null`
 ## Good files to check
 - `~/.bash_history`
+	- run `history` in terminal
 - `cat /var/log/auth.log | grep useradd`
 - `/etc/systemd/system`
 - `/var/log/syslog`
@@ -37,6 +38,15 @@
 ## Network
 - `osqueryi`
 	- `SELECT pid, fd, socket, local_address, remote_address FROM process_open_sockets WHERE pid = 267490;`
+- `netstat`
+	- `-a, --all` : Show both listening and non-listening sockets.
+	- `-l, --listening`: Show only listening sockets.
+	- `-t, --tcp`: Display TCP connections.
+	- `-u, --udp`: Display UDP connections.
+	- `-4, --inet`: Show only IPv4 connections.
+	- `-6, --inet6`: Show only IPv6 connections.
+	- `-n, --numeric`: Display numerical addresses instead of resolving host, port, or user names, which speeds up output generation.
+	- `-p, --program`: Show the PID and name of the program to which each socket belongs (PID/Program Name). Root privileges are typically required to view this information.
 
 ## Processes
 - `ps aux`
@@ -54,6 +64,7 @@
 	- `-d [seconds]` refresh rate
 	- `-c` display full command paths
 	- `-u [user]` only show a specific user's processes
+- `who` logged in users
 # Log Analysis
 ---
 ### `grep`
@@ -79,3 +90,12 @@
 	- `/etc/cron*/`  Contains system cron jobs
 ## Other persistance
 - `~/.config/autostart/`
+# Disks
+---
+- `df -hT`
+	- View usage and types of disks
+- `dd if=<source> of=<destination> bs=<block_size> status=progress`
+	- `sudo dd if=/dev/sdb1 of=/path/to/disk_image.img bs=4M status=progress`
+- `mount -o ro [device] [destination]`
+	- Read only mount
+- 
