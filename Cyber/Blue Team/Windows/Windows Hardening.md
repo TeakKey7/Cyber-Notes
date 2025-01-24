@@ -12,3 +12,8 @@
 - Local Computer Policy
 ## Antivirus
 - Virus & Threat Protection > Exclusions
+# Purpose
+- what does the vm do?
+- network shares
+- running ptocesses
+- 
