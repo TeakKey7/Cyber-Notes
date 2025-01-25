@@ -8,6 +8,14 @@
 - `ls -l` mtime (modify timestamp)
 - `ls -lc` ctime (change timestamp) metadeta/filename/permissions
 - `ls -la` atime (access timestamp)
+### Volatility
+- LiME (Linux Memory Extractor) creates .dmp
+- fmem
+- avml
+- memdump
+- coredump
+    - process specific
+- Create symbol table (vol3) using dwarf2json
 ### Find
 - `find / -type f -executable 2> /dev/null`
 ## Good files to check
