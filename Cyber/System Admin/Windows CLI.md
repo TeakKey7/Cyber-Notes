@@ -57,8 +57,7 @@ Powershell is an object-oriented language. Powershell returns an object for each
 	- Just like any other programming language, Powershell contains libraries called *Modules.* They can be searched using `Find-Module` and installed using `Install-Module`.
 
 ## Cmd Commands
-* * *
-
+---
 ### `Systeminfo`
 
 - Hostname
@@ -76,6 +75,7 @@ Powershell is an object-oriented language. Powershell returns an object for each
 	- `-b` shows the program associated with each listening port and established connection
 	- `-o` reveals the process ID (PID) associated with the connection
 	- `-n` uses a numerical form for addresses and port numbers
+- Check for listeners that seem suspicious (high port numbers, ESTABLISHED but not listening, incorrect port numbers)
 
 ### File navigation
 
@@ -101,3 +101,19 @@ Powershell is an object-oriented language. Powershell returns an object for each
 	- `tasklist /?`
 - `tasklist /FI "imagename eq sshd.exe"`
 - `taskkill /PID 1234`
+- Most system tasks should be ABOVE explorer.exe
+
+### `wmic`
+- use alias `process` for blue team
+    - check for bad launch arguments (Ports, ips, etc)
+# Sysinternals
+---
+`-accepteula`
+## `handle.exe`
+- equivalent to lsof
+## `autorunsc`
+- hunt for persistence
+- scans registries for autorun commands
+## `sigcheck`
+- -o use virustotal
+- 

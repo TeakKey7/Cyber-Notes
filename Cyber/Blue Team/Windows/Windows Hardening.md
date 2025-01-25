@@ -15,5 +15,6 @@
 # Purpose
 - what does the vm do?
 - network shares
-- running ptocesses
-- 
+- running processes
+# Keep in mind
+- /TEMP/* IS BAD
