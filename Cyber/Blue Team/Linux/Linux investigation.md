@@ -9,13 +9,24 @@
 - `ls -lc` ctime (change timestamp) metadeta/filename/permissions
 - `ls -la` atime (access timestamp)
 ### Volatility
+#### Extractors
 - LiME (Linux Memory Extractor) creates .dmp
 - fmem
 - avml
 - memdump
 - coredump
     - process specific
-- Create symbol table (vol3) using dwarf2json
+#### Steps
+- `python3 vol.py -f [file] banner` gets the uname of Linux
+- Create symbol table (vol3) using dwarf2json if versions match or use https://isf-server.techanarchy.net/
+	- Move isf (.json) to volatility3/symbols
+#### Symbols
+- Linux.pslist process list
+- linux.sockstat network list
+- linux.bash bash history
+- linux.pstree process tree
+- linux.lsof
+- linux.vmayarascan find malware signatures
 ### Find
 - `find / -type f -executable 2> /dev/null`
 ## Good files to check
