@@ -1,5 +1,7 @@
 # Linux Forensics / Investigation
 ## Securing binaries
+- Trusted binaries should be in `/bin`, `/sbin`, and `/usr/bin`
+	- Anything else should be a red flag
 - `export PATH=/mnt/usb/bin:/mnt/usb/sbin`
 - `export LD_LIBRARY_PATH=/mnt/usb/lib:/mnt/usb/lib64`
 - `debsums`
@@ -20,7 +22,7 @@
 #### Steps
 - `python3 vol.py -f [file] banner` gets the uname of Linux
 - Create symbol table (vol3) using dwarf2json if versions match or use https://isf-server.techanarchy.net/
-	- Move isf (.json) to volatility3/symbols
+	- Move isf (.json) to `volatility3/symbols` folder
 #### Symbols
 - Linux.pslist process list
 - linux.sockstat network list
@@ -47,7 +49,7 @@
 ### Network
 - `osqueryi`
 	- `SELECT pid, fd, socket, local_address, remote_address FROM process_open_sockets WHERE pid = 267490;`
-- `netstat`
+- `netstat -natup`
 	- `-a, --all` : Show both listening and non-listening sockets.
 	- `-l, --listening`: Show only listening sockets.
 	- `-t, --tcp`: Display TCP connections.
@@ -88,6 +90,7 @@
 - `cat /etc/shells`
 - `chsh -s /usr/bin/zsh`
 - `history`
+- `last`/`lastb` find the last logins or bad logins
 ### Find
 - `find / -type f -executable 2> /dev/null`
 ### Good files to check
@@ -98,14 +101,16 @@
 - `/var/log/syslog`
 
 ## System stuff
-### Systemd
+### Systemd `systemctl`
 - `/etc/systemd/system`
+- *sysd* is a very legacy version of systemd
 ### Cron
  - `/var/spool/cron/crontabs/[username]`
 - `/etc/crontab` main cron file
 	- `/etc/cron*/`  Contains system cron jobs
 ## Other persistance
 - `~/.config/autostart/`
+- `/etc/init.d`
 ## Disks
 - `df -hT`
 	- View usage and types of disks
