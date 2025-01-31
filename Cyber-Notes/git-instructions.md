@@ -6,3 +6,4 @@
 	1. Push
 	2. Select origin
 	3. Type name of branch
+4. Done.
