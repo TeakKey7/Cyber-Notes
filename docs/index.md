@@ -1,17 +1,19 @@
-# Welcome to MkDocs
+```markdown
+# Directory Overview
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- **Cyber**
+  - **Blue Team**
+    - **Linux**
+      - [Checklist](Cyber/Blue Team/Linux/Checklist.md)
+      - [Linux Investigation](Cyber/Blue Team/Linux/Linux investigation.md)
+    - **Log Analysis**
+      - [Event IDs](Cyber/Blue Team/Log analysis/Event IDs.md)
+    - **Windows**
+      - [Windows Hardening](Cyber/Blue Team/Windows/Windows Hardening.md)
+      - [Windows Tools](Cyber/Blue Team/Windows/Windows Tools.md)
+  - **System Admin**
+    - [Active Directory](Cyber/System Admin/Active Directory.md)
+    - [Bash](Cyber/System Admin/Bash.md)
+    - [Linux CLI](Cyber/System Admin/Linux CLI.md)
+    - [Windows CLI](Cyber/System Admin/Windows CLI.md)
+    - [Windows GUI](Cyber/System Admin/Windows GUI.md)
