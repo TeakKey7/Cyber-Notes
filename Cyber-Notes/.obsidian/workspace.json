@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cyber/Blue-Team/Log-analysis/Auth.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Auth"
+              "title": "index"
             }
           }
         ],
@@ -191,13 +191,15 @@
   },
   "active": "e9b5313b4110a9a3",
   "lastOpenFiles": [
+    "Cyber/System-Admin/Windows-GUI.md",
     "index.md",
+    "Cyber/Blue-Team/Windows/Auth.md",
+    "Cyber/Blue-Team/Linux/Log-analysis",
     "Cyber/Blue-Team/Windows/Windows Tools.md",
     "Cyber/Blue-Team/Windows/Windows Hardening.md",
     "Cyber/Blue-Team/Log analysis/Event IDs.md",
     "Cyber/Blue-Team/Linux/Linux-investigation.md",
     "Cyber/Blue-Team/Linux/Checklist.md",
-    "Cyber/System-Admin/Windows-GUI.md",
     "Cyber/System-Admin/Windows-CLI.md",
     "Cyber/System-Admin/Linux-CLI.md",
     "Cyber/System-Admin/Bash.md",
@@ -225,10 +227,7 @@
     "docs/Cyber/Blue-Team/Log analysis/Event IDs.md",
     "docs/Cyber/Blue-Team/Windows",
     "docs/Cyber/Blue-Team/Log analysis",
-    "docs/Cyber/Blue-Team/Linux",
     "img/grid.png",
-    "README.md",
-    "Cyber/Blue Team/Log analysis/Event IDs.md",
     "Untitled.canvas"
   ]
 }
