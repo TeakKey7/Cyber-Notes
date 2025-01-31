@@ -1,3 +1,4 @@
+# Linux Forensics / Investigation
 ## Securing binaries
 - `export PATH=/mnt/usb/bin:/mnt/usb/sbin`
 - `export LD_LIBRARY_PATH=/mnt/usb/lib:/mnt/usb/lib64`
@@ -9,6 +10,7 @@
 - `ls -lc` ctime (change timestamp) metadeta/filename/permissions
 - `ls -la` atime (access timestamp)
 ### Volatility
+---
 #### Extractors
 - LiME (Linux Memory Extractor) creates .dmp
 - fmem

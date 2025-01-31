@@ -1,4 +1,4 @@
-site_name: 'Cyber Notes Vault'  # Customize your site name
+site_name: 'Cyber Notes'  # Customize your site name
 docs_dir: Cyber-Notes
 markdown_extensions:
   - admonition  # For note blocks like warnings, tips, etc.

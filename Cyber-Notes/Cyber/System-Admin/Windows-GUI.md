@@ -1,4 +1,6 @@
-# Control Panel
+# Windows GUI
+
+## Control Panel
 ### MSConfig
 
 - Safe boot
