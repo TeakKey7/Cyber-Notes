@@ -1,3 +1,4 @@
 Cyber-Notes/.obsidian/*
 site/
 !Cyber-Notes/.obsidian/*plugins*
+.cache/
