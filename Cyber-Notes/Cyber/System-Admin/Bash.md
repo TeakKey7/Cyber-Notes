@@ -1,6 +1,5 @@
 # Bash Scripting
 
-> [!NOTE]
 > #!/bin/bash - shebang (haSH - BANG)
 
 # Basic logic
