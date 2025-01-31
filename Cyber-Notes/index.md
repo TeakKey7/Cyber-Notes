@@ -18,4 +18,4 @@
 
 ## Installation instructions
 
-In order to download the repository to request note changes, you will need to download [Git](https://git-scm.com/downloads) and [Obsidian](https://obsidian.md). The instructions can be found [here](git-instructions).
+In order to download the repository to request note changes, you will need to download [Git](https://git-scm.com/downloads) and [Obsidian](https://obsidian.md). The instructions can be found [here](git-instructions.md).

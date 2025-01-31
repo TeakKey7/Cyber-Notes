@@ -1,6 +1,11 @@
 site_name: 'Cyber Notes'  # Customize your site name
-repo_url: https://github.com/teakkey7/Cyber-Notes
-docs_dir: Cyber-Notes
+repo_url: https://github.com/TeakKey7/Cyber-Notes 
+docs_dir: Cyber-Notes/
+plugins:
+  - git-committers:
+      repository: TeakKey7/Cyber-Notes
+      branch: master
+      docs_path: Cyber-Notes
 markdown_extensions:
   - admonition  # For note blocks like warnings, tips, etc.
   - codehilite  # Syntax highlighting for code blocks
