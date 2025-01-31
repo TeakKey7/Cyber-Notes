@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cyber/Blue-Team/Linux/Linux-investigation.md",
+                "file": "Cyber/Blue-Team/Linux/Checklist.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux-investigation"
+              "title": "Checklist"
             }
           }
         ]
@@ -140,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cyber/Blue-Team/Linux/Linux-investigation.md",
+                "file": "Cyber/Blue-Team/Linux/Checklist.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Linux-investigation"
+              "title": "Outline of Checklist"
             }
           },
           {
@@ -179,14 +179,14 @@
   },
   "active": "6f7e84a045115a89",
   "lastOpenFiles": [
-    "Cyber/Blue-Team/Linux/Checklist.md",
     "Cyber/Blue-Team/Linux/Linux-investigation.md",
     "Cyber/Blue-Team/Log-analysis/Auth.md",
     "Cyber/Blue-Team/Windows/Windows-Hardening.md",
-    "Cyber/Blue-Team/Windows/Windows-Tools.md",
     "Cyber/System-Admin/Active-Directory.md",
     "Cyber/System-Admin/Bash.md",
     "Cyber/System-Admin/Linux-CLI.md",
+    "Cyber/Blue-Team/Linux/Checklist.md",
+    "Cyber/Blue-Team/Windows/Windows-Tools.md",
     "Cyber/System-Admin/Windows-CLI.md",
     "Cyber/System-Admin/Windows-GUI.md",
     "Cyber/System-Admin/Linux.md",
