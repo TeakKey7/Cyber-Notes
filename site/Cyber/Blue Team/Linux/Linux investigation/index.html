@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Linux Investigation - Cyber Notes Vault</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../../..">Cyber Notes Vault</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Cyber</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Blue Team</a>
+    <ul class="dropdown-menu">
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Checklist/" class="dropdown-item">Checklist</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Linux Investigation</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Log Analysis</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Log%20analysis/Event%20IDs/" class="dropdown-item">Event IDs</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Windows/Windows%20Hardening/" class="dropdown-item">Windows Hardening</a>
+</li>
+            
+<li>
+    <a href="../../Windows/Windows%20Tools/" class="dropdown-item">Windows Tools</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">System Admin</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../System%20Admin/Active%20Directory/" class="dropdown-item">Active Directory</a>
+</li>
+            
+<li>
+    <a href="../../../System%20Admin/Bash/" class="dropdown-item">Bash</a>
+</li>
+            
+<li>
+    <a href="../../../System%20Admin/Linux%20CLI/" class="dropdown-item">Linux CLI</a>
+</li>
+            
+<li>
+    <a href="../../../System%20Admin/Windows%20CLI/" class="dropdown-item">Windows CLI</a>
+</li>
+            
+<li>
+    <a href="../../../System%20Admin/Windows%20GUI/" class="dropdown-item">Windows GUI</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Checklist/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../Log%20analysis/Event%20IDs/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#securing-binaries" class="nav-link">Securing binaries</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#forensics" class="nav-link">Forensics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#good-files-to-check" class="nav-link">Good files to check</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#user-config" class="nav-link">User config</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#config-files" class="nav-link">Config files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#process-snooping" class="nav-link">Process snooping</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#network" class="nav-link">Network</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#processes" class="nav-link">Processes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#log-analysis" class="nav-link">Log Analysis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#snooping" class="nav-link">Snooping</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#shells" class="nav-link">Shells</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#system-stuff" class="nav-link">System stuff</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#systemd" class="nav-link">Systemd</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cron" class="nav-link">Cron</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#other-persistance" class="nav-link">Other persistance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#disks" class="nav-link">Disks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="securing-binaries">Securing binaries</h2>
+<ul>
+<li><code>export PATH=/mnt/usb/bin:/mnt/usb/sbin</code></li>
+<li><code>export LD_LIBRARY_PATH=/mnt/usb/lib:/mnt/usb/lib64</code></li>
+<li><code>debsums</code><ul>
+<li><code>-e --config</code> config files</li>
+<li><code>-c --changed</code> only output changed files</li>
+</ul>
+</li>
+</ul>
+<h2 id="forensics">Forensics</h2>
+<ul>
+<li><code>ls -l</code> mtime (modify timestamp)</li>
+<li><code>ls -lc</code> ctime (change timestamp) metadeta/filename/permissions</li>
+<li><code>ls -la</code> atime (access timestamp)</li>
+</ul>
+<h3 id="volatility">Volatility</h3>
+<h4 id="extractors">Extractors</h4>
+<ul>
+<li>LiME (Linux Memory Extractor) creates .dmp</li>
+<li>fmem</li>
+<li>avml</li>
+<li>memdump</li>
+<li>coredump<ul>
+<li>process specific</li>
+</ul>
+</li>
+</ul>
+<h4 id="steps">Steps</h4>
+<ul>
+<li><code>python3 vol.py -f [file] banner</code> gets the uname of Linux</li>
+<li>Create symbol table (vol3) using dwarf2json if versions match or use https://isf-server.techanarchy.net/<ul>
+<li>Move isf (.json) to volatility3/symbols</li>
+</ul>
+</li>
+</ul>
+<h4 id="symbols">Symbols</h4>
+<ul>
+<li>Linux.pslist process list</li>
+<li>linux.sockstat network list</li>
+<li>linux.bash bash history</li>
+<li>linux.pstree process tree</li>
+<li>linux.lsof</li>
+<li>linux.vmayarascan find malware signatures</li>
+</ul>
+<h3 id="find">Find</h3>
+<ul>
+<li><code>find / -type f -executable 2&gt; /dev/null</code></li>
+</ul>
+<h2 id="good-files-to-check">Good files to check</h2>
+<ul>
+<li><code>~/.bash_history</code><ul>
+<li>run <code>history</code> in terminal</li>
+</ul>
+</li>
+<li><code>cat /var/log/auth.log | grep useradd</code></li>
+<li><code>/etc/systemd/system</code></li>
+<li><code>/var/log/syslog</code></li>
+</ul>
+<h1 id="user-config">User config</h1>
+<hr />
+<h2 id="config-files">Config files</h2>
+<ul>
+<li><code>/etc/passwd</code><ul>
+<li><code>cat /etc/passwd | cut -d: -f1,3 | grep ':0$'</code></li>
+</ul>
+</li>
+<li><code>/etc/group</code></li>
+</ul>
+<h3 id="groups">Groups</h3>
+<ul>
+<li><code>/etc/group</code></li>
+<li><code>groups [USER]</code></li>
+<li><code>getent group adm</code></li>
+<li><code>getent group 27</code></li>
+</ul>
+<h1 id="process-snooping">Process snooping</h1>
+<hr />
+<ul>
+<li><code>lsof</code><ul>
+<li><code>-i</code> Network connections</li>
+<li><code>-P</code> display port numbers</li>
+<li><code>-n</code> show ips instead of resolving hostnames</li>
+<li><code>-p</code> PID</li>
+</ul>
+</li>
+</ul>
+<h2 id="network">Network</h2>
+<ul>
+<li><code>osqueryi</code><ul>
+<li><code>SELECT pid, fd, socket, local_address, remote_address FROM process_open_sockets WHERE pid = 267490;</code></li>
+</ul>
+</li>
+<li><code>netstat</code><ul>
+<li><code>-a, --all</code> : Show both listening and non-listening sockets.</li>
+<li><code>-l, --listening</code>: Show only listening sockets.</li>
+<li><code>-t, --tcp</code>: Display TCP connections.</li>
+<li><code>-u, --udp</code>: Display UDP connections.</li>
+<li><code>-4, --inet</code>: Show only IPv4 connections.</li>
+<li><code>-6, --inet6</code>: Show only IPv6 connections.</li>
+<li><code>-n, --numeric</code>: Display numerical addresses instead of resolving host, port, or user names, which speeds up output generation.</li>
+<li><code>-p, --program</code>: Show the PID and name of the program to which each socket belongs (PID/Program Name). Root privileges are typically required to view this information.</li>
+</ul>
+</li>
+</ul>
+<h2 id="processes">Processes</h2>
+<ul>
+<li><code>ps aux</code><ul>
+<li><code>a</code> all users</li>
+<li><code>u</code> user oriented (user and start time)</li>
+<li><code>x</code> Include processes not attached to a terminal</li>
+</ul>
+</li>
+<li><code>ps -eFH</code><ul>
+<li><code>-e</code> select all processes</li>
+<li><code>-F</code> extra full mode</li>
+<li><code>-H</code> process hierarchy (forest)</li>
+</ul>
+</li>
+<li><code>pstree [PID]</code><ul>
+<li><code>-p</code> list PID</li>
+<li><code>-s</code> list child processes parents</li>
+</ul>
+</li>
+<li><code>top</code><ul>
+<li><code>-d [seconds]</code> refresh rate</li>
+<li><code>-c</code> display full command paths</li>
+<li><code>-u [user]</code> only show a specific user's processes</li>
+</ul>
+</li>
+<li><code>who</code> logged in users</li>
+</ul>
+<h1 id="log-analysis">Log Analysis</h1>
+<hr />
+<h3 id="grep"><code>grep</code></h3>
+<ul>
+<li><code>grep [SEARCH TERM] file.txt</code></li>
+</ul>
+<h3 id="wc"><code>wc</code></h3>
+<ul>
+<li>-c --bytes</li>
+<li>-m --chars</li>
+<li>-l --lines (newlines)</li>
+<li>-w --words</li>
+</ul>
+<h1 id="snooping">Snooping</h1>
+<h2 id="shells">Shells</h2>
+<ul>
+<li><code>echo $SHELL</code></li>
+<li><code>cat /etc/shells</code></li>
+<li><code>chsh -s /usr/bin/zsh</code></li>
+<li><code>history</code></li>
+</ul>
+<h1 id="system-stuff">System stuff</h1>
+<hr />
+<h2 id="systemd">Systemd</h2>
+<ul>
+<li><code>/etc/systemd/system</code></li>
+</ul>
+<h2 id="cron">Cron</h2>
+<ul>
+<li><code>/var/spool/cron/crontabs/[username]</code></li>
+<li><code>/etc/crontab</code> main cron file<ul>
+<li><code>/etc/cron*/</code>  Contains system cron jobs</li>
+</ul>
+</li>
+</ul>
+<h2 id="other-persistance">Other persistance</h2>
+<ul>
+<li><code>~/.config/autostart/</code></li>
+</ul>
+<h1 id="disks">Disks</h1>
+<hr />
+<ul>
+<li><code>df -hT</code><ul>
+<li>View usage and types of disks</li>
+</ul>
+</li>
+<li><code>dd if=&lt;source&gt; of=&lt;destination&gt; bs=&lt;block_size&gt; status=progress</code><ul>
+<li><code>sudo dd if=/dev/sdb1 of=/path/to/disk_image.img bs=4M status=progress</code></li>
+</ul>
+</li>
+<li><code>mount -o ro [device] [destination]</code><ul>
+<li>Read only mount</li>
+</ul>
+</li>
+<li></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../../js/base.js"></script>
+        <script src="../../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
