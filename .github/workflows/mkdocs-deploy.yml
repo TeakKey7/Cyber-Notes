@@ -25,6 +25,7 @@ jobs:
         run: |
           pip install mkdocs-material
           pip install mkdocs-git-committers-plugin-2
+          pip install mkdocs-git-revision-date-localized-plugin
 
       - name: Configure Git for GitHub Actions
         run: |
