@@ -106,14 +106,13 @@ Powershell is an object-oriented language. Powershell returns an object for each
 ### `wmic`
 - use alias `process` for blue team
     - check for bad launch arguments (Ports, ips, etc)
-# Sysinternals
+## Sysinternals
 ---
 `-accepteula`
-## `handle.exe`
+### `handle.exe`
 - equivalent to lsof
-## `autorunsc`
+### `autorunsc`
 - hunt for persistence
 - scans registries for autorun commands
-## `sigcheck`
+### `sigcheck`
 - -o use virustotal
-- 

@@ -9,8 +9,7 @@
 - `ls -l` mtime (modify timestamp)
 - `ls -lc` ctime (change timestamp) metadeta/filename/permissions
 - `ls -la` atime (access timestamp)
-### Volatility
----
+## Volatility
 #### Extractors
 - LiME (Linux Memory Extractor) creates .dmp
 - fmem
@@ -29,18 +28,8 @@
 - linux.pstree process tree
 - linux.lsof
 - linux.vmayarascan find malware signatures
-### Find
-- `find / -type f -executable 2> /dev/null`
-## Good files to check
-- `~/.bash_history`
-	- run `history` in terminal
-- `cat /var/log/auth.log | grep useradd`
-- `/etc/systemd/system`
-- `/var/log/syslog`
-
-# User config
----
-## Config files
+## User config
+### Config files
 - `/etc/passwd`
 	- `cat /etc/passwd | cut -d: -f1,3 | grep ':0$'`
 - `/etc/group`
@@ -49,14 +38,13 @@
 - `groups [USER]`
 - `getent group adm`
 - `getent group 27`
-# Process snooping
----
+## Process snooping
 - `lsof`
 	- `-i` Network connections
 	- `-P` display port numbers
 	- `-n` show ips instead of resolving hostnames
 	- `-p` PID
-## Network
+### Network
 - `osqueryi`
 	- `SELECT pid, fd, socket, local_address, remote_address FROM process_open_sockets WHERE pid = 267490;`
 - `netstat`
@@ -86,8 +74,7 @@
 	- `-c` display full command paths
 	- `-u [user]` only show a specific user's processes
 - `who` logged in users
-# Log Analysis
----
+## Log Analysis
 ### `grep`
 - `grep [SEARCH TERM] file.txt`
 ### `wc`
@@ -95,24 +82,31 @@
 - -m --chars
 - -l --lines (newlines)
 - -w --words
-# Snooping
-## Shells
+## File Snooping
+### Shells
 - `echo $SHELL`
 - `cat /etc/shells`
 - `chsh -s /usr/bin/zsh`
 - `history`
-# System stuff
----
-## Systemd
+### Find
+- `find / -type f -executable 2> /dev/null`
+### Good files to check
+- `~/.bash_history`
+	- run `history` in terminal
+- `cat /var/log/auth.log | grep useradd`
 - `/etc/systemd/system`
-## Cron
+- `/var/log/syslog`
+
+## System stuff
+### Systemd
+- `/etc/systemd/system`
+### Cron
  - `/var/spool/cron/crontabs/[username]`
 - `/etc/crontab` main cron file
 	- `/etc/cron*/`  Contains system cron jobs
 ## Other persistance
 - `~/.config/autostart/`
-# Disks
----
+## Disks
 - `df -hT`
 	- View usage and types of disks
 - `dd if=<source> of=<destination> bs=<block_size> status=progress`
