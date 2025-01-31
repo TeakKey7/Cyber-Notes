@@ -24,6 +24,7 @@ jobs:
       - name: Install MkDocs and dependencies
         run: |
           pip install mkdocs-material
+          pip install mkdocs-git-committers-plugin-2
 
       - name: Configure Git for GitHub Actions
         run: |
@@ -31,13 +32,14 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Build MkDocs site
+        env:
+          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdocs build
 
       - name: Deploy to GitHub Pages using GITHUB_TOKEN
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdocs gh-deploy --force --remote-branch gh-pages
 
