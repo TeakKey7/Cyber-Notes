@@ -37,6 +37,7 @@ jobs:
       - name: Deploy to GitHub Pages using GITHUB_TOKEN
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdocs gh-deploy --force --remote-branch gh-pages
 
