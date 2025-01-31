@@ -1,24 +1,13 @@
 site_name: 'Cyber Notes Vault'  # Customize your site name
-
-nav:
-  - Home: index.md
-  - Cyber:
-      - Blue Team:
-          - Linux:
-              - Checklist: Cyber/Blue Team/Linux/Checklist.md
-              - Linux Investigation: Cyber/Blue Team/Linux/Linux investigation.md
-          - Log Analysis:
-              - Event IDs: Cyber/Blue Team/Log analysis/Event IDs.md
-          - Windows:
-              - Windows Hardening: Cyber/Blue Team/Windows/Windows Hardening.md
-              - Windows Tools: Cyber/Blue Team/Windows/Windows Tools.md
-      - System Admin:
-          - Active Directory: Cyber/System Admin/Active Directory.md
-          - Bash: Cyber/System Admin/Bash.md
-          - Linux CLI: Cyber/System Admin/Linux CLI.md
-          - Windows CLI: Cyber/System Admin/Windows CLI.md
-          - Windows GUI: Cyber/System Admin/Windows GUI.md
-
+docs_dir: Cyber-Notes
+markdown_extensions:
+  - admonition  # For note blocks like warnings, tips, etc.
+  - codehilite  # Syntax highlighting for code blocks
+  - pymdownx.details
+  - pymdownx.superfences
+use_directory_urls: true
+extra:
+  navigation_depth: 1  # Prevent headers from being used as links
 theme:
-  name: mkdocs  # You can replace with another theme if preferred
+  name: material  # You can replace with another theme if preferred
 

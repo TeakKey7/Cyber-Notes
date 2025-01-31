@@ -1,4 +1,4 @@
-# Command Line
+# Windows Command Line Interface (CLI)
 ## Powershell
 Powershell is an object-oriented language. Powershell returns an object for each command which can be piped `|` into a function.
 * * *

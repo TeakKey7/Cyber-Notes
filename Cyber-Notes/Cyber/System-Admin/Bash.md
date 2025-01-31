@@ -1,4 +1,8 @@
-#!/bin/bash - shebang (haSH - BANG)
+# Bash Scripting
+
+> [!NOTE]
+> #!/bin/bash - shebang (haSH - BANG)
+
 # Basic logic
 ```
 for i in {1..10};

@@ -1,4 +1,4 @@
-# The basics
+# Hardening
 ## Eternal Blue
 - `Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol`
 ## ARP Posoining
@@ -17,4 +17,4 @@
 - network shares
 - running processes
 # Keep in mind
-- /TEMP/* IS BAD
+- FILES IN /TEMP IS BAD

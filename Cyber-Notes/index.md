@@ -13,6 +13,6 @@
   - **System Admin**
     - [Active Directory](Cyber/System-Admin/Active-Directory.md)
     - [Bash](Cyber/System-Admin/Bash.md)
-    - [Linux CLI](Cyber/System-Admin/Linux CLI.md)
-    - [Windows CLI](Cyber/System-Admin/Windows CLI.md)
-    - [Windows GUI](Cyber/System-Admin/Windows GUI.md)
+    - [Linux CLI](Cyber/System-Admin/Linux-CLI.md)
+    - [Windows CLI](Cyber/System-Admin/Windows-CLI.md)
+    - [Windows GUI](Cyber/System-Admin/Windows-GUI.md)

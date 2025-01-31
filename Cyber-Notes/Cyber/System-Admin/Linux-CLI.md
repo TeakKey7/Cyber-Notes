@@ -1,4 +1,4 @@
-# Operators
+# Linux Command Line Interface (CLI)
 ## &
 Runs commands in the background
 ## &&
