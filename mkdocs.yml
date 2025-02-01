@@ -22,4 +22,5 @@ use_directory_urls: true
   # navigation_depth: 1  # Prevent headers from being used as links
 theme:
   name: material  # You can replace with another theme if preferred
-
+  logo:
+    icon: material/server-security
