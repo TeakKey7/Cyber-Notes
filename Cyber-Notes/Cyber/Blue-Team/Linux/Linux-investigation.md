@@ -7,6 +7,14 @@
 - `debsums`
 	- `-e --config` config files
 	- `-c --changed` only output changed files
+- `which` where is the command/binary located?
+	- `file` Check the binaries and ensure they are not scripts
+### Alias
+- `alias` check if any commands have been aliased
+-  `alias >> aliases.txt && cat aliases.txt`
+> A bad actor could theoretically alias **ANYTHING** to `rm -rf /`. This should realistically be the first thing you run. It would also be a good idea to use `>>` as mentioned for future investigation possibilites
+- `~/.bashrc` often contains aliases. **logging in will reset all aliases defined in .bashrc**
+- `unalias --all` is a quick and dirty **temporary** solution to aliases.
 ## Forensics
 - `ls -l` mtime (modify timestamp)
 - `ls -lc` ctime (change timestamp) metadeta/filename/permissions
@@ -58,7 +66,8 @@
 	- `-6, --inet6`: Show only IPv6 connections.
 	- `-n, --numeric`: Display numerical addresses instead of resolving host, port, or user names, which speeds up output generation.
 	- `-p, --program`: Show the PID and name of the program to which each socket belongs (PID/Program Name). Root privileges are typically required to view this information.
-
+-  `iptable`, `ufw`
+	- Check the firewall
 ## Processes
 - `ps aux`
 	- `a` all users
