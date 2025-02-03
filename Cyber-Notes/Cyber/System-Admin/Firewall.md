@@ -22,3 +22,10 @@
 - Change management interface to permitted IP only
 - No insecure services (no telnet, http, snmp)
 - Nuke unnecessary admin users
+
+## Configuration
+### Admin database
+- Under **Device** got to Authentication Profiles and add a local database.
+	- Advanced > Allow All
+	- Add user as administrator
+- Setup authentication sequence if using LDAP or RADIUS
