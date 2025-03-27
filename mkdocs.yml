@@ -18,7 +18,8 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 use_directory_urls: true
-#extra:
+extra:
+  generator: false
   # navigation_depth: 1  # Prevent headers from being used as links
 theme:
   name: material  # You can replace with another theme if preferred
