@@ -1,0 +1,19 @@
+# Aperture Science VM
+- Removed r00t.service
+- removed Snap firefox; install apt firefox
+- Under [Daemon] in /etc/gdm3/custom.conf add WaylandEnable=false
+- Check /etc/init.d; no rootkits
+- Check /home/wheatley for backdoor
+- Removed wheatley from /etc/passwd
+- In /etc/groups, made cjohnson admin and removed wheatley from all groups
+- Checking crontabs, removed ratman sabotage cron; removing the executable
+- Added caroline
+- added chell to testsubjects
+- removed files from ~/music dirs
+- chown root /home
+- removed gman from sudo
+- configuring vsftpd
+- Configuring SSH
+	- change port to 1382
+	- remove group testsubjects
+- Added /usr/sbin/nologin to root and delted /etc/shadow password

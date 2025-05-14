@@ -11,4 +11,8 @@ Appends the output of a command somewhere else
 Ignores any file permission errors
 > 2 represents stderr which means this command will "*blackhole*" an errors
 ## Dumb stuff
-``2`> I personally have used this before when my Linux terminal exports my term as foot 
+```
+stty sane
+export TERM=linux
+```
+I personally have used this before when my Linux terminal exports my term as foot which is not usually installed on many devices
